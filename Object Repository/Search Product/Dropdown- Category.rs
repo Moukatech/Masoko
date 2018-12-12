@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Input- Mobile No</name>
+   <name>Dropdown- Category</name>
    <tag></tag>
-   <elementGuidId>a6fff4b0-9469-45fd-8748-3d5f47749d7d</elementGuidId>
+   <elementGuidId>7959a8ab-a24f-44c0-a5d7-afdef33b0dbe</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//input[@name='telephone']</value>
+         <value>//select[@title='Select Category']
+</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -17,6 +18,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//input[@name='telephone']</value>
+      <value>//select[@title='Select Category']
+</value>
    </webElementProperties>
 </WebElementEntity>

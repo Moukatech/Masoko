@@ -4,32 +4,54 @@ import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
 import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
+import com.kms.katalon.core.logging.KeywordLogger
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
 import com.kms.katalon.core.testcase.TestCase as TestCase
 import com.kms.katalon.core.testdata.TestData as TestData
 import com.kms.katalon.core.testobject.TestObject as TestObject
+import com.kms.katalon.core.util.KeywordUtil
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
+
+TestData data = findTestData('Search')
+
+KeywordLogger log = new KeywordLogger()
+
 
 WebUI.openBrowser(GlobalVariable.baseURL)
 
 WebUI.maximizeWindow()
 
-WebUI.click(findTestObject('Signin Page/Link- SignIn'))
+WebUI.delay(2)
 
-WebUI.delay(3)
+for (def index : (0..data.getRowNumbers() - 1)) {
+    WebUI.click(findTestObject('Search Product/Dropdown- Category'))
 
-WebUI.sendKeys(findTestObject('Signin Page/Input-Email'), findTestData('Datasource').getValue(4, 1))
+    WebUI.delay(2)
 
-WebUI.delay(3)
+    WebUI.click(findTestObject('Search Product/Select- Category_VAR', [('Category') : data.internallyGetValue('Category', 
+                    index)]))
 
-WebUI.setEncryptedText(findTestObject('Signin Page/Input-Password'), 'dg5xLn3Kdje4IG74Nn0kqg==')
+    WebUI.delay(1)
 
-WebUI.delay(3)
+    WebUI.setText(findTestObject('Search Product/Search Box'), data.internallyGetValue('SearchInput', index))
 
-WebUI.click(findTestObject('Signin Page/Button-Signin'))
+    WebUI.delay(1)
 
-WebUI.callTestCase(findTestCase('SignIn/Logout'), [:], FailureHandling.STOP_ON_FAILURE)
+    WebUI.click(findTestObject('Search Product/Search Button'))
+
+    WebUI.delay(2)
+
+    Results_After_Search = WebUI.getText(findTestObject('Search Product/Grid- Returned Items'))
+
+    if(Results_After_Search.contains(data.internallyGetValue('SearchInput', index))){
+		KeywordUtil.markPassed("Search Result Matches Input")
+	}
+	
+	else{
+		KeywordUtil.markFailed("ERROR!!Search Result NOT Matching Input")
+	}
+}
 

@@ -34,10 +34,32 @@ for (def index : (0..data.getRowNumbers() - 1)) {
 
     WebUI.click(findTestObject('Signin Page/Button-Signin'))
 
-    WebUI.delay(10)
+    WebUI.delay(5)
 
-    WebUI.verifyTextPresent(data.internallyGetValue('Verification Message', index), false)
+    not_run: WebUI.verifyTextPresent(data.internallyGetValue('VerificationMessage', index), false)
+
+    if (((index == 0) && (index == 1)) && (index == 3)) {
+        WebUI.verifyElementPresent(findTestObject('Signin Page/Error Message-Email'), 0)
+    }
+    
+    if (index == 2) {
+        WebUI.verifyElementPresent(findTestObject('Signin Page/Error Message-Email'), 0)
+
+        WebUI.verifyElementPresent(findTestObject('Signin Page/Error Message-Password Required'), 0)
+    }
+    
+    if (index == 4) {
+        WebUI.verifyElementPresent(findTestObject('Signin Page/Error Message- Invalid passwrd and email'), 0)
+    }
+    
+    if (index == 5) {
+        WebUI.verifyElementPresent(findTestObject('Signin Page/Element -My Account'), 0)
+    }
 }
+
+WebUI.delay(2)
+
+WebUI.mouseOver(findTestObject('Signin Page/Element -My Account'))
 
 WebUI.click(findTestObject('Signin Page/Link-Logout'))
 

@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>.//*[@id='D9TH8GT']</value>
+         <value>//input[@name='city']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -17,6 +17,6 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>.//*[@id='D9TH8GT']</value>
+      <value>//input[@name='city']</value>
    </webElementProperties>
 </WebElementEntity>

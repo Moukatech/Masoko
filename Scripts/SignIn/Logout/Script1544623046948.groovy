@@ -15,7 +15,7 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.delay(3)
 
-WebUI.verifyElementPresent(findTestObject('Signin Page/Element -My Account'), 0)
+WebUI.verifyElementPresent(findTestObject('Signin Page/Element -My Account'), 5)
 
 WebUI.mouseOver(findTestObject('Signin Page/Element -My Account'))
 

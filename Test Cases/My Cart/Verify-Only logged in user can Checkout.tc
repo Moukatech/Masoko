@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Verify-Only logged in user can Checkout</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>252470ee-6bdf-4a9b-b506-44fc5dd5384e</testCaseGuid>
+</TestCaseEntity>

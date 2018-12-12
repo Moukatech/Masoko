@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Search For Product</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>e6bf5906-c073-4b5e-90e7-3d774f8a9a6f</testCaseGuid>
+   <variable>
+      <defaultValue>'Televisions'</defaultValue>
+      <description></description>
+      <id>b2ea1bc3-8646-42da-898d-bce9f7937539</id>
+      <masked>false</masked>
+      <name>Category_Selection_1</name>
+   </variable>
+   <variable>
+      <defaultValue>'Hisense'</defaultValue>
+      <description></description>
+      <id>ed452f68-e6fc-48b2-b9bd-05ece0111b39</id>
+      <masked>false</masked>
+      <name>Search_Input_1</name>
+   </variable>
+   <variable>
+      <defaultValue>'Mobile Phones'</defaultValue>
+      <description></description>
+      <id>03da8697-8a82-41bc-971e-01bd3745f2e5</id>
+      <masked>false</masked>
+      <name>Category_Selection_2</name>
+   </variable>
+   <variable>
+      <defaultValue>'Huawei'</defaultValue>
+      <description></description>
+      <id>1e8d1dce-3fd5-458f-92e5-0c46a53f65e2</id>
+      <masked>false</masked>
+      <name>Search_Input_2</name>
+   </variable>
+   <variable>
+      <defaultValue>'Computer'</defaultValue>
+      <description></description>
+      <id>c2a3b483-28b8-4bbf-920a-eed70a549367</id>
+      <masked>false</masked>
+      <name>Category_Selection_3</name>
+   </variable>
+   <variable>
+      <defaultValue>'Dell'</defaultValue>
+      <description></description>
+      <id>b0197d83-6497-4d4c-8edd-3f7b47d0f3d0</id>
+      <masked>false</masked>
+      <name>Search_Input_3</name>
+   </variable>
+</TestCaseEntity>

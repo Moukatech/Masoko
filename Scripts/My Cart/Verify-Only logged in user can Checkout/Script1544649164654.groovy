@@ -17,19 +17,27 @@ WebUI.openBrowser(GlobalVariable.baseURL)
 
 WebUI.maximizeWindow()
 
-WebUI.click(findTestObject('Signin Page/Link- SignIn'))
+WebUI.delay(3)
+
+WebUI.scrollToPosition(0, 400)
+
+WebUI.delay(2)
+
+WebUI.click(findTestObject('My Cart/Button- Add To Cart'))
 
 WebUI.delay(3)
 
-WebUI.sendKeys(findTestObject('Signin Page/Input-Email'), findTestData('Datasource').getValue(4, 1))
+WebUI.click(findTestObject('My Cart/Link- My Cart'))
 
 WebUI.delay(3)
 
-WebUI.setEncryptedText(findTestObject('Signin Page/Input-Password'), 'dg5xLn3Kdje4IG74Nn0kqg==')
+WebUI.click(findTestObject('My Cart/Link-Go To Cart page'))
 
 WebUI.delay(3)
 
-WebUI.click(findTestObject('Signin Page/Button-Signin'))
+WebUI.click(findTestObject('My Cart/Button-Go to Checkout'))
 
-WebUI.callTestCase(findTestCase('SignIn/Logout'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.delay(3)
+
+WebUI.waitForElementPresent(findTestObject('My Cart/Message- Checkout as new Customer'), 0)
 

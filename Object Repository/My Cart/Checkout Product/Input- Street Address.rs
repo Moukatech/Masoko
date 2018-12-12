@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>.//*[@id='JWY4P36']</value>
+         <value>//input[@data-autocomplete-scope='shippingAddress']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -17,6 +17,6 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>.//*[@id='JWY4P36']</value>
+      <value>//input[@data-autocomplete-scope='shippingAddress']</value>
    </webElementProperties>
 </WebElementEntity>

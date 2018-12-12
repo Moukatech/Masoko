@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Input- Mobile No</name>
+   <name>Select- Category_VAR</name>
    <tag></tag>
-   <elementGuidId>a6fff4b0-9469-45fd-8748-3d5f47749d7d</elementGuidId>
+   <elementGuidId>2afe270a-8ae2-49a5-b4d7-85d4d8114859</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//input[@name='telephone']</value>
+         <value>//option[contains(.,'${Category}')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -17,6 +17,6 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//input[@name='telephone']</value>
+      <value>//option[contains(.,'${Category}')]</value>
    </webElementProperties>
 </WebElementEntity>
