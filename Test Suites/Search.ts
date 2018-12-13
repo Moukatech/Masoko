@@ -4,6 +4,7 @@
    <name>Search</name>
    <tag></tag>
    <isRerun>false</isRerun>
+   <lastRun>2018-12-13T00:46:21</lastRun>
    <mailRecipient></mailRecipient>
    <numberOfRerun>0</numberOfRerun>
    <pageLoadTimeout>30</pageLoadTimeout>
